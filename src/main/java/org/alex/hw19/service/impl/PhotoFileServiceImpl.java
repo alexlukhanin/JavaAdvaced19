@@ -37,9 +37,9 @@ public class PhotoFileServiceImpl implements PhotoFileService {
     }
 
     @Override
-    public PhotoFile getFile(String id) throws FileNotFoundException {
-        return photoFileRepository.findById(id)
-                .orElseThrow(() -> new FileNotFoundException("File not found with Id =" + id));
+    public PhotoFile getFile(String fileId) throws FileNotFoundException {
+        return photoFileRepository.findById(fileId)
+                .orElseThrow(() -> new FileNotFoundException("File not found with Id =" + fileId));
 
     }
 }

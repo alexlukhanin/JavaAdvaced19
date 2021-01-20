@@ -1,4 +1,4 @@
-let studentR;
+let studentResponse;
 function ready() {
 
     let xhr = new XMLHttpRequest();
@@ -6,16 +6,16 @@ function ready() {
     xhr.open("GET", "downloadFileThis");
     xhr.onload = function() {
 
-        studentR = xhr.response;
+        studentResponse = xhr.response;
 
         let context =
             '<div class="img">' +
-            '<img src="' + studentR.fileDownloadUri + '" alt="">'+
+            '<img src="' + studentResponse.fileDownloadUri + '" alt="">'+
             '</div>' +
             '<div class=student>' +
-            '<p>First name :  ' + studentR.firstName + '</p>'+
-            '<p>Last name : '+ studentR.lastName + '</p>' +
-            '<p>Age : ' + studentR.age + '</p>';
+            '<p>First name :  ' + studentResponse.firstName + '</p>'+
+            '<p>Last name : '+ studentResponse.lastName + '</p>' +
+            '<p>Age : ' + studentResponse.age + '</p>';
 
         document.getElementById('paste').innerHTML = context;
 

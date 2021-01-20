@@ -14,9 +14,9 @@ import java.util.List;
 
 public interface PhotoFileController {
 
-    public PhotoFileUploadResponse uploadFile(MultipartFile file) throws IOException;
-    public ResponseEntity<Resource> downloadFile(String fileId) throws FileNotFoundException;
-    public List<PhotoFileUploadResponse> uploadMultipleFiles(MultipartFile[] files);
-    public PhotoFileUploadResponse downloadFileThis();
-    public PhotoFileUploadResponse registration(Student students);
+    PhotoFileUploadResponse uploadFile(MultipartFile file) throws IOException;
+    ResponseEntity<Resource> downloadFile(String fileId) throws FileNotFoundException;
+    List<PhotoFileUploadResponse> uploadMultipleFiles(MultipartFile[] files);
+    PhotoFileUploadResponse downloadFileThis();
+    PhotoFileUploadResponse registration(Student students);
 }

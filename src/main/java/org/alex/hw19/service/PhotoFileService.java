@@ -9,6 +9,6 @@ import java.io.IOException;
 
 public interface PhotoFileService {
 
-    public PhotoFile storeFile(Student student, MultipartFile file) throws IOException;
-    public PhotoFile getFile(String id) throws FileNotFoundException;
+    PhotoFile storeFile(Student student, MultipartFile file) throws IOException;
+    PhotoFile getFile(String fileId) throws FileNotFoundException;
 }

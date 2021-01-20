@@ -82,8 +82,9 @@ public class PhotoFileControllerImpl implements PhotoFileController {
 
     @Override
     @RequestMapping(value="/registration" , method = RequestMethod.POST)
-    public @ResponseBody PhotoFileUploadResponse registration(@RequestBody Student students) {
-        student = students;
+    public @ResponseBody PhotoFileUploadResponse registration(@RequestBody Student student) {
+        this.student = student;
         return null;
+
     }
 }
